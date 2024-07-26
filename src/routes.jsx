@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Favorites from "./pages/Favorites";
 import Container from "./components/Container";
 import { FavoritesProvider } from "./contexts/Favorites";
+import Player from "./pages/Player";
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/favoritos" element={<Favorites />} />
+                        <Route path="/:id" element={<Player />} />
                     </Routes>
                 </FavoritesProvider>
             </Container>
