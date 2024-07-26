@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Favorites from "./pages/Favorites";
 import Container from "./components/Container";
-import FavoritesProvider from "./contexts/Favorites";
+import { FavoritesProvider } from "./contexts/Favorites";
 
 function AppRoutes() {
     return (
