@@ -4,9 +4,20 @@ import Title from "@/components/Title";
 
 import styles from "./Home.module.css";
 
-import videos from "@/json/db.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Home() {
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+        const fetchVideos = async () => {
+            const response = await axios.get("http://localhost:3000/videos");
+            setVideos(response.data);
+        };
+        fetchVideos();
+    }, []);
+
     return (
         <>
             <Banner imagem={"home"} />
